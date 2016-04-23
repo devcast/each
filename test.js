@@ -16,6 +16,10 @@ describe('each.js', function() {
       it('should sum an array of values', function() {
         expect(sum).to.equal(15);
       });
+
+      it('the typeof sum should be a number', function() {
+        expect(sum).to.be.an('number');
+      });
     });
   });
 });
