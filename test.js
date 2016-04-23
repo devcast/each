@@ -4,14 +4,16 @@ var expect = require('chai').expect,
 describe('each.js', function() {
   describe('#each', function() {
     describe('when passed an array', function() {
-      it('should sum an array of values', function() {
+      beforeEach(function() {
         arr = [1, 2, 3, 4, 5];
         sum = 0;
 
         each(arr, function(value) {
           sum += value;
         });
+      });
 
+      it('should sum an array of values', function() {
         expect(sum).to.equal(15);
       });
     });
