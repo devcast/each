@@ -1,0 +1,21 @@
+{
+  "name": "each",
+  "description": "Utility to iterate the items of Objects, DOM Lists, Arrays...",
+  "main": "index.js",
+  "authors": [
+    "Felquis <@felquis>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "each",
+    "foreach"
+  ],
+  "homepage": "https://github.com/devcast/each",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
