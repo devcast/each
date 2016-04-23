@@ -1,0 +1,23 @@
+{
+  "name": "each",
+  "version": "1.0.0",
+  "description": "Utility to iterate the items of Objects, DOM Lists, Arrays...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devcast/each.git"
+  },
+  "keywords": [
+    "each",
+    "foreach"
+  ],
+  "author": "Felquis <@felquis>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devcast/each/issues"
+  },
+  "homepage": "https://github.com/devcast/each#readme"
+}
