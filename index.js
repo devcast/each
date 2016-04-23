@@ -1,8 +1,4 @@
-
-/*
-    Utility, iterate Objects, Lists, Arrays..
-*/
-function each(list, transform) {
+module.exports = function each(list, transform) {
   var keys = Object.keys(list),
       index = 0,
       total
