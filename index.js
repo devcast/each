@@ -1,38 +1,32 @@
-(function () {
-  function each(list, transform) {
-    var keys = Object.keys(list),
+(function() {
+  'use strict';
+
+  var each = function(list, transform) {
+    var keys  = Object.keys(list),
         index = 0,
-        total
+        total = keys.length;
 
-    // Check if 'length' is the last key
-    // this is a guess to turn around this Safari bug
+    if(keys.indexOf('length') === (keys.length - 1))
+      keys.pop();
+
+    if(typeof transform !== 'function')
+      throw('The second param must be a function');
+
     // https://bugs.webkit.org/show_bug.cgi?id=152454
-    if (keys.indexOf('length') === (keys.length - 1)) {
-      keys.pop()
-    }
-
-    total = keys.length
-
-    if (typeof transform !== 'function') {
-      throw('The second param must be a function')
-      return
-    }
-
-    for (; index < total; index++) {
-      transform(list[keys[index]], keys[index])
-    }
-  }
+    for(; index < total; index++)
+      transform(list[keys[index]], keys[index]);
+  };
 
   if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = each
+    module.exports = each;
   } else {
     if (typeof define === 'function' && define.amd) {
       define([], function() {
-        return each
+        return each;
       });
     }
     else {
-      window.each = each
+      window.each = each;
     }
   }
-}())
+})();

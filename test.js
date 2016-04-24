@@ -20,6 +20,31 @@ describe('each.js', function() {
       it('the typeof sum should be a number', function() {
         expect(sum).to.be.an('number');
       });
+
+      describe('when passed an empty array', function() {
+        it('should not return the sum', function() {
+          sum = null;
+
+          expect(sum).not.to.eql(15);
+        });
+      });
+    });
+
+    describe('when passed an object', function() {
+      it('should iterate in property and value', function() {
+        each({name: 'Felquis'}, function(value, property) {
+          expect(value).to.equal('Felquis');
+          expect(property).to.equal('name');
+        });
+      });
+
+      describe('when passed a {}', function() {
+        it('should throw an error', function() {
+          each({}, function(value, property) {
+            expect(property).to.throw(MethodError);
+          });
+        });
+      });
     });
   });
 });
