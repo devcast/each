@@ -10,7 +10,7 @@
       keys.pop();
 
     if(typeof transform !== 'function')
-      throw('The second param must be a function');
+      throw(ArgumentError, 'The second param must be a function');
 
     // https://bugs.webkit.org/show_bug.cgi?id=152454
     for(; index < total; index++)

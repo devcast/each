@@ -39,9 +39,9 @@ describe('each.js', function() {
       });
 
       describe('when passed a {}', function() {
-        it('should throw an error', function() {
+        it('should throw an ArgumentError', function() {
           each({}, function(value, property) {
-            expect(property).to.throw(MethodError);
+            expect(property).to.throw(ArgumentError);
           });
         });
       });
