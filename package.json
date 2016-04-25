@@ -1,5 +1,5 @@
 {
-  "name": "each",
+  "name": "each-item",
   "version": "1.0.0",
   "description": "Utility to iterate the items of Objects, DOM Lists, Arrays...",
   "main": "index.js",
